@@ -1,0 +1,18 @@
+services:
+  test-image:
+    build:
+      dockerfile: Dockerfile
+    privileged: true
+    ports:
+      - "6080:6080"
+      - "5901:5901"
+    labels:
+      - "desktop.web.port=6080"
+      - "desktop.vnc.port=5901"
+    environment:
+      - RESOLUTION=1920x1080x16
+    # stdin_open: true # This is supposed to allow for interative terminal session seems to have worked.
+    # tty: true
+
+volumes:
+  test-volume:
