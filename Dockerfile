@@ -1,8 +1,4 @@
-# Base image with architecture-specific tag
-# It looks like builds for arm64 are not pre built. 
-# It will have to either be compiled or I am missing something.
-FROM arm64v8/ros:iron-perception-jammy
-
+FROM ros:iron-perception-jammy
 
 # Example of installing programs
 RUN apt-get update \
